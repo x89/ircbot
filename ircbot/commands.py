@@ -1,5 +1,6 @@
 from ircbot.web import get_google_result, get_random_yp_comment
 from ircbot.plugin.qdb_search import Quotes
+from ircbot.plugin.btc import BTC
 import ircbot.streams
 from datetime import datetime
 
@@ -134,5 +135,9 @@ def qdb(bot, args, user):
         return ', '.join([str(_) for _ in quotes])
     else:
         return "Nothing found matching those deets."
+
+def btc(bot, args, user):
+    b = BTC()
+    return b.get_latest_price(currency=str(' '.join(args)))
 
 # vim: ts=4
