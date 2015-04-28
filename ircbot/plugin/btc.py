@@ -10,8 +10,9 @@ class BTC:
     url = 'https://api.bitcoinaverage.com/ticker/global/{0}/last'
     currencies = {
         'USD': False,
-        'EUR': False, 
+        'EUR': False,
         'GBP': False,
+        'AUD': False,
         }
     last_update = datetime.now()
 
